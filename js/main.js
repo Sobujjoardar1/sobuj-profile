@@ -23,16 +23,16 @@ $('.counter').counterUp({
 });
 //progress ber
 $(document).ready(function() {
-    $('#bar1').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar2').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar3').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar4').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar5').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar6').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar7').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar8').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar9').barfiller({ barColor: "#464545", duration: 2000 });
-    $('#bar10').barfiller({ barColor: "#464545", duration: 2000 });
+    $('#bar1').barfiller({ barColor: "red", duration: 2000 });
+    $('#bar2').barfiller({ barColor: "green", duration: 2000 });
+    $('#bar3').barfiller({ barColor: "yellow", duration: 2000 });
+    $('#bar4').barfiller({ barColor: "red", duration: 2000 });
+    $('#bar5').barfiller({ barColor: "green", duration: 2000 });
+    $('#bar6').barfiller({ barColor: "yellow", duration: 2000 });
+    $('#bar7').barfiller({ barColor: "red", duration: 2000 });
+    $('#bar8').barfiller({ barColor: "green", duration: 2000 });
+    $('#bar9').barfiller({ barColor: "yellow", duration: 2000 });
+    $('#bar10').barfiller({ barColor: "red", duration: 2000 });
 });
 //for protfolio isotope
 $(window).on("load", function() {
@@ -128,3 +128,14 @@ lightBoxContainer.addEventListener("click", function(e) {
         lightBox();
     }
 });
+
+
+//Current time setup
+function date_time(){
+		const today = new Date();
+		const currTime = today.toLocaleTimeString();
+		
+		
+		document.getElementById('currTime').innerHTML = currTime;
+	}
+	setInterval(date_time, 1000);
